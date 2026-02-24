@@ -70,7 +70,7 @@ format_message_mem() {
     if [ ${#cmd} -gt 200 ]; then
         cmd="${cmd:0:200}..."
     fi
-    printf "🟢 <b>Высокое потребление памяти</b>\nВремя: %s\nIP: %s\nВерсия rudesktop: %s\nPID: %s\nКоманда: %s\nСредний RSS за %d мин: %.1f MB" \
+    printf "⚠️ <b>Высокое потребление памяти</b>\nВремя: %s\nIP: %s\nВерсия rudesktop: %s\nPID: %s\nКоманда: %s\nСредний RSS за %d мин: %.1f MB" \
            "$timestamp" "$IP_ADDR" "$RUDESKTOP_VERSION" "$pid" "$cmd" "$minutes" "$avg_mb"
 }
 
